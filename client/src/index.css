@@ -2,59 +2,62 @@
 
 body {
   background: radial-gradient(
-      circle at 15% 25%,
-      rgba(124, 58, 237, 0.18),
-      transparent 40%
+      circle at 15% 20%,
+      rgba(168, 85, 247, 0.18),
+      transparent 38%
     ),
     radial-gradient(
-      circle at 85% 75%,
-      rgba(6, 182, 212, 0.18),
-      transparent 40%
+      circle at 85% 80%,
+      rgba(244, 114, 182, 0.16),
+      transparent 36%
     ),
     linear-gradient(
       135deg,
-      #050816 0%,
-      #0B0F1A 40%,
-      #111827 100%
+      #05040a 0%,
+      #100812 36%,
+      #1b0d1d 100%
     );
   background-attachment: fixed;
+  color: var(--color-text);
+  min-height: 100vh;
 }
 
 :root {
   /* Background */
   --color-background: radial-gradient(
-      circle at 15% 25%,
-      rgba(124, 58, 237, 0.18),
-      transparent 40%
+      circle at 15% 20%,
+      rgba(168, 85, 247, 0.18),
+      transparent 38%
     ),
     radial-gradient(
-      circle at 85% 75%,
-      rgba(6, 182, 212, 0.18),
-      transparent 40%
+      circle at 85% 80%,
+      rgba(244, 114, 182, 0.16),
+      transparent 36%
     ),
     linear-gradient(
       135deg,
-      #050816 0%,
-      #0B0F1A 40%,
-      #111827 100%
+      #05040a 0%,
+      #100812 36%,
+      #1b0d1d 100%
     );
   background-attachment: fixed;
-  --color-section: #1A1F2E;
+  --color-section: #120913;
 
-  /* Primary Accent - Electric Purple */
-  --color-primary: #7C3AED;
-  --color-primary-hover: #6D28D9;
+  /* Primary Accent */
+  --color-primary: #d8a4ff;
+  --color-primary-hover: #c084fc;
 
-  /* Secondary Accent - Cyan */
-  --color-secondary: #06B6D4;
-  --color-secondary-hover: #0891B2;
+  /* Secondary Accent */
+  --color-secondary: #f472b6;
+  --color-secondary-hover: #ec4899;
+  --color-accent: #f9a8d4;
 
   /* Text */
-  --color-text:  #E2E8F0;
-  --color-text-muted: #94A3B8;
+  --color-text: #f7eaf1;
+  --color-text-muted: #d2b9c4;
 
   /* Gradient Accent */
-  --color-gradient: linear-gradient(90deg, #7C3AED, #06B6D4);
+  --color-gradient: linear-gradient(90deg, #fde2ee 0%, #d8a4ff 48%, #f472b6 100%);
 }
 
 .hero-name {
@@ -62,33 +65,59 @@ body {
   font-weight: 700;
   letter-spacing: 2px;
 
-  background: linear-gradient(90deg, #A5B4FC, #22D3EE);
+  background: linear-gradient(90deg, #fde2ee 0%, #d8a4ff 50%, #f472b6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  text-shadow: 0 0 30px rgba(124, 58, 237, 0.25);
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.22);
 }
 
 
 .portfolio-name {
-  
   font-weight: 700;
-  background: linear-gradient(90deg, #7C3AED, #06B6D4);
+  background: linear-gradient(90deg, #fde2ee 0%, #d8a4ff 48%, #f472b6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .animate-name {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 1.2s ease forwards;
+  display: inline-block;
+  animation: floatText 3s ease-in-out infinite;
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes floatText {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.icon-pulse {
+  animation: pulseLight 2s infinite ease-in-out;
+  border: 1px solid rgba(255, 214, 224, 0.12);
+}
+
+@keyframes pulseLight {
+  0% {
+    background-color: rgb(32 16 28);
+    filter: brightness(1);
+  }
+
+  50% {
+    background-color: rgb(58 22 49);
+    filter: brightness(1.18);
+  }
+
+  100% {
+    background-color: rgb(32 16 28);
+    filter: brightness(1);
   }
 }
