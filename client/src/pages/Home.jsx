@@ -5,8 +5,10 @@ import { FiGithub } from "react-icons/fi";
 import { GrCode } from "react-icons/gr";
 import { FiLinkedin } from "react-icons/fi";
 import { GoMail } from "react-icons/go";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const Navigate = useNavigate();
   return (
     <>
       <div className="min-h-screen text-(--color-text) px-3 sm:px-4 md:px-6 pt-6 pb-20 sm:pb-6 ax-w-7xl mx-auto  bg-black/25 backdrop-blur-md p-4 sm:p-8 md:p-10">
@@ -44,13 +46,13 @@ const Home = () => {
           className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 text-center mt-6"
           style={{ fontFamily: "Dancing Script, cursive" }}
         >
-          <p className="flex gap-2 justify-center items-center cursor-pointer rounded-full border border-white/10 bg-white/5 px-5 py-2.5">
+          <button onClick={()=>Navigate("/project")} className="flex gap-2 justify-center items-center cursor-pointer rounded-full border border-white/10 bg-white/5 px-5 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-300/40 hover:bg-white/10">
             <FaArrowRightLong /> See My Project
-          </p>
+          </button>
 
-          <p className="flex gap-2 justify-center items-center cursor-pointer rounded-full border border-white/10 bg-white/5 px-5 py-2.5">
+          <button onClick={()=> Navigate("/about")} className="flex gap-2 justify-center items-center cursor-pointer rounded-full border border-white/10 bg-white/5 px-5 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-300/40 hover:bg-white/10">
             <FaArrowRightLong /> More About Me
-          </p>
+          </button>
         </div>
 
         {/* Social Icons */}
