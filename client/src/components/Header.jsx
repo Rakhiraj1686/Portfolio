@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import rakhi from "../assets/rakhiL.png";
+import rakhi from "../assets/rrr.png";
 import { Link, useLocation } from "react-router-dom";
 import {
   FaHome,
@@ -33,7 +33,7 @@ const Header = () => {
       {isHome ? (
         <>
           {/* Desktop: vertical sidebar on right */}
-          <div className="hidden sm:fixed sm:flex sm:flex-col sm:z-50 sm:right-6 sm:top-1/2 sm:-translate-y-1/2 bg-black/40 backdrop-blur-md border border-white/10 rounded-full p-4 gap-6 items-center text-white shadow-[0_20px_50px_rgba(5,3,7,0.45)]">
+          <div className="hidden sm:fixed sm:flex sm:flex-col sm:z-50 sm:right-6 sm:top-1/2 sm:-translate-y-1/2 bg-black/40 backdrop-blur-md border border-white/10 rounded-full p-4 py-10 gap-10 items-center text-white shadow-[0_20px_50px_rgba(5,3,7,0.45)]">
             <Link
               to="/"
               className="flex items-center gap-3 hover:text-(--color-accent)"
@@ -86,7 +86,7 @@ const Header = () => {
           </div>
 
           {/* Mobile: hamburger in top-right corner */}
-          <div className="sm:hidden fixed top-4 right-4 z-50 text-white">
+          <div className="sm:hidden  fixed top-4 right-4 z-50 text-white">
             <button
               className="bg-black/45 backdrop-blur-md border border-white/10 rounded-full p-3 text-xl shadow-lg"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -141,7 +141,7 @@ const Header = () => {
           </div>
         </>
       ) : (
-        <div className="relative p-4 sm:p-5 rounded-2xl sm:rounded-full max-w-5xl mx-4 sm:mx-auto mt-4 sm:mt-10 flex justify-between items-center text-white backdrop-blur-md bg-black/40 border border-white/10 shadow-[0_20px_50px_rgba(5,3,7,0.4)]">
+        <div className="relative p-6  sm:p-2 rounded-full sm:px-8  sm:rounded-full max-w-7xl mx-4 sm:mx-auto  mt-4  sm:mt-10 flex justify-between items-center text-white backdrop-blur-md bg-black/40 border border-white/10 shadow-[0_20px_50px_rgba(5,3,7,0.4)]">
           <img
             src={rakhi}
             alt=""
@@ -163,7 +163,7 @@ const Header = () => {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden text-xl rounded-full p-2 bg-black/35 border border-white/10"
+            className="md:hidden  lg:hidden text-xl rounded-full p-2 bg-black/35 border border-white/10"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <FaTimes /> : <FaBars />}

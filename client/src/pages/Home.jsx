@@ -1,5 +1,5 @@
 import React from "react";
-import rakhi from "../assets/rakhiL.png";
+import rakhi from "../assets/rrr.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { GrCode } from "react-icons/gr";
