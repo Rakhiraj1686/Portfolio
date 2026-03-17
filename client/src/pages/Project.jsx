@@ -1,7 +1,7 @@
 import React from "react";
-import image from "../assets/projects/healthup.png";
-import image1 from "../assets/projects/craveit.png";
-import image2 from "../assets/projects/converse.png";
+import image from "../assets/projects/fitAI.png";
+import image1 from "../assets/projects/craving.png";
+import image2 from "../assets/projects/ChatApp.png";
 
 const projects = [
   {
