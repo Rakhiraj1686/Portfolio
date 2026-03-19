@@ -3,7 +3,7 @@ import rakhi from "../assets/rrr.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { GrCode } from "react-icons/gr";
-import { FiLinkedin } from "react-icons/fi";
+import { BiLogoLinkedin } from "react-icons/bi";
 import { GoMail } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 
@@ -11,9 +11,9 @@ const Home = () => {
   const Navigate = useNavigate();
   return (
     <>
-      <div className="min-h-screen text-(--color-text) px-3 sm:px-4 md:px-6 pt-6 pb-20 sm:pb-6 ax-w-7xl mx-auto  bg-black/25 backdrop-blur-md p-4 sm:p-8 md:p-10">
+      <div className="min-h-screen text-(--color-text) px-3 sm:px-8 md:px-6 pt-6 pb-20 sm:pb-6 ax-w-7xl mx-auto  bg-black/25 backdrop-blur-md p-4 sm:p-8 md:p-10">
         {/* Profile Image */}
-        <div className="mx-auto sm:justify-center">
+        <div className="mx-auto sm:px-15 sm:py-8 sm:justify-center">
           <img
             src={rakhi}
             alt="Rakhi"
@@ -42,17 +42,42 @@ const Home = () => {
         </div>
 
         {/* Action Links */}
-        <div
-          className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 text-center mt-6"
-          style={{ fontFamily: "Dancing Script, cursive" }}
-        >
-          <button onClick={()=>Navigate("/project")} className="flex gap-2 justify-center items-center cursor-pointer rounded-full border border-white/10 bg-white/5 px-5 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-300/40 hover:bg-white/10">
-            <FaArrowRightLong /> See My Project
-          </button>
+        <div className="w-full flex justify-center mt-8 px-4">
+          <div
+            className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-[60%] sm:w-auto"
+            style={{ fontFamily: "Dancing Script, cursive" }}
+          >
+            {/* Project Button */}
+            <button
+              onClick={() => Navigate("/project")}
+              className="group w-full sm:w-auto flex items-center justify-center gap-2 
+      rounded-full px-6 py-3 
+      bg-linear-to-r bg-white/5
+      border border-white/10 
+      backdrop-blur-md
+      text-white font-medium
+      transition-all duration-300 ease-in-out
+      hover:scale-105 hover:border-pink-300/50 hover:shadow-lg hover:shadow-pink-500/20"
+            >
+              <span>See My Project</span>
+              <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
 
-          <button onClick={()=> Navigate("/about")} className="flex gap-2 justify-center items-center cursor-pointer rounded-full border border-white/10 bg-white/5 px-5 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-300/40 hover:bg-white/10">
-            <FaArrowRightLong /> More About Me
-          </button>
+            {/* About Button */}
+            <button
+              onClick={() => Navigate("/about")}
+              className="group w-full sm:w-auto flex items-center justify-center gap-2 
+      rounded-full px-6 py-3 
+      bg-white/5 border border-white/10 
+      backdrop-blur-md
+      text-white font-medium
+      transition-all duration-300 ease-in-out
+      hover:scale-105 hover:border-purple-300/50 hover:bg-white/10 hover:shadow-lg hover:shadow-purple-500/20"
+            >
+              <span>More About Me</span>
+              <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1" />
+            </button>
+          </div>
         </div>
 
         {/* Social Icons */}
@@ -84,7 +109,7 @@ const Home = () => {
               window.open("https://www.linkedin.com/in/Rakhiraj1686", "_blank")
             }
           >
-            <FiLinkedin />
+            <BiLogoLinkedin />
           </button>
 
           <button

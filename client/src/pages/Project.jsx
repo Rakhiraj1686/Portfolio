@@ -2,7 +2,9 @@ import React from "react";
 import image from "../assets/projects/fitAI.png";
 import image1 from "../assets/projects/craving.png";
 import image2 from "../assets/projects/ChatApp.png";
-
+import { IoLogoGithub } from "react-icons/io5";
+import { HiOutlineExternalLink } from "react-icons/hi";
+  
 const projects = [
   {
     title: "HealthUp",
@@ -54,7 +56,7 @@ const projects = [
 const Project = () => {
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden px-6 pb-16 pt-24 text-(--color-text) md:px-12">
+      <section className="relative min-h-screen overflow-hidden px-6 pb-16 pt-15 text-(--color-text) md:px-12">
 
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
@@ -112,7 +114,8 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="flex-1 rounded-lg border border-white/10 bg-white/5 py-2 text-center text-sm transition hover:border-pink-300/40 hover:bg-white/10"
                   >
-                    View Code -&gt;
+                    <IoLogoGithub className="inline mr-2" />
+                    View Code 
                   </a>
 
                   <a
@@ -121,7 +124,8 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="flex-1 rounded-lg border border-white/10 bg-white/5 py-2 text-center text-sm transition hover:border-pink-300/40 hover:bg-white/10"
                   >
-                    View Live -&gt;
+                    View Live 
+                    <HiOutlineExternalLink className="inline ml-2" />
                   </a>
                 </div>
               </div>
