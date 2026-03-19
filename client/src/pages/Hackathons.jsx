@@ -1,5 +1,5 @@
 import React from "react";
-import hackathonNK from "../assets/hackathon/hackathonNK.jpeg";
+import hackathonNK from "../assets/hackathonNK.jpeg";
 
 const hackathons = [
   {
