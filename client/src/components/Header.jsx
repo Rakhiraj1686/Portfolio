@@ -57,11 +57,13 @@ const Header = () => {
       ) : (
         <div className="sticky top-3 z-30 p-4 sm:p-3 rounded-full sm:px-8 max-w-7xl mx-4 sm:mx-auto mt-4 sm:mt-6 flex justify-between items-center text-white backdrop-blur-md bg-black/40 border border-white/10 shadow-[0_20px_50px_rgba(5,3,7,0.4)]">
           {/* Logo */}
-          <img
-            src={rakhi}
-            alt=""
-            className="h-10 w-10 sm:h-12 sm:w-12 rounded-full"
-          />
+          <Link to="/" aria-label="Go to home">
+            <img
+              src={rakhi}
+              alt="Rakhi"
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full"
+            />
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex gap-6 text-sm">
