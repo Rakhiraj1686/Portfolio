@@ -106,7 +106,7 @@ const Skill = () => {
 
       <div className="flex items-center justify-center border-t border-white/10 bg-white/5 py-3 backdrop-blur-sm">
         <div className="text-sm tracking-wide text-pink-100/65">
-          Copyright 2026 Rakhi. All rights reserved.
+          &copy; 2026 Rakhi. All rights reserved.
         </div>
       </div>
     </>
