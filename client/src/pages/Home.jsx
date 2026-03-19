@@ -18,7 +18,7 @@ const Home = () => {
             src={rakhi}
             alt="Rakhi"
             className="h-20 w-20 sm:h-28 sm:w-28 md:h-32 md:w-32 rounded-full"
-            onClick={()=> Navigate("/")}
+            onClick={() => Navigate("/")}
           />
         </div>
 
@@ -29,11 +29,9 @@ const Home = () => {
             style={{ fontFamily: "Dancing Script, cursive" }}
           >
             <h1 className="text-4xl sm:text-6xl lg:text-8xl text-center items-center portfolio-name animate-name font-bold">
-              {" "}
               <span style={{ fontFamily: "Dancing Script, cursive" }}>
-                {" "}
-                Hey, I am RAKHI{" "}
-              </span>{" "}
+                Hey, I am RAKHI
+              </span>
             </h1>
             <p className="text-sm sm:text-lg md:text-xl mt-3 sm:mt-5 px-4 sm:px-0">
               I am a Software Developer specializing in MERN Full Stack
