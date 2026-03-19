@@ -4,7 +4,7 @@ import image1 from "../assets/projects/craving.png";
 import image2 from "../assets/projects/ChatApp.png";
 import { IoLogoGithub } from "react-icons/io5";
 import { HiOutlineExternalLink } from "react-icons/hi";
-  
+
 const projects = [
   {
     title: "HealthUp",
@@ -57,7 +57,6 @@ const Project = () => {
   return (
     <>
       <section className="relative min-h-screen overflow-hidden px-6 pb-16 pt-15 text-(--color-text) md:px-12">
-
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
             Projects
@@ -69,17 +68,21 @@ const Project = () => {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Divider */}
+
+        <div className="mx-auto h-px w-32 bg-linear-to-r from-transparent via-purple-300 to-pink-400 shadow-[0_0_24px_rgba(216,164,255,0.35)]" />
+
+        <div className="mx-auto grid max-w-6xl gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:bg-white/10"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-pink-300/40 hover:bg-white/10"
             >
               <div className="overflow-hidden">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-52 w-full object-cover transition duration-500 group-hover:scale-110"
+                  className="h-52 w-full object-cover transition duration-500 hover:scale-105"
                 />
               </div>
 
@@ -89,7 +92,9 @@ const Project = () => {
                     {project.title}
                   </h3>
 
-                  <span className="text-xs text-pink-100/65">{project.date}</span>
+                  <span className="text-xs text-pink-100/65">
+                    {project.date}
+                  </span>
                 </div>
 
                 <p className="text-sm leading-relaxed text-pink-100/78">
@@ -115,7 +120,7 @@ const Project = () => {
                     className="flex-1 rounded-lg border border-white/10 bg-white/5 py-2 text-center text-sm transition hover:border-pink-300/40 hover:bg-white/10"
                   >
                     <IoLogoGithub className="inline mr-2" />
-                    View Code 
+                    View Code
                   </a>
 
                   <a
@@ -124,7 +129,7 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="flex-1 rounded-lg border border-white/10 bg-white/5 py-2 text-center text-sm transition hover:border-pink-300/40 hover:bg-white/10"
                   >
-                    View Live 
+                    View Live
                     <HiOutlineExternalLink className="inline ml-2" />
                   </a>
                 </div>

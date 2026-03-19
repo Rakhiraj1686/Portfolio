@@ -22,7 +22,7 @@ const Home = () => {
         </div>
 
         {/* Hero Section */}
-        <div className="flex justify-center items-center mt-35 sm:mt-24 md:mt-40">
+        <div className="flex justify-center items-center mt-40 sm:mt-35 md:mt-35">
           <div
             className="text-center max-w-3xl"
             style={{ fontFamily: "Dancing Script, cursive" }}
@@ -57,7 +57,7 @@ const Home = () => {
       backdrop-blur-md
       text-white font-medium
       transition-all duration-300 ease-in-out
-      hover:scale-105 hover:border-pink-300/50 hover:shadow-lg hover:shadow-pink-500/20"
+      hover:scale-105 hover:border-pink-300/40 hover:shadow-md hover:shadow-pink-500/10"
             >
               <span>See My Project</span>
               <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -72,7 +72,7 @@ const Home = () => {
       backdrop-blur-md
       text-white font-medium
       transition-all duration-300 ease-in-out
-      hover:scale-105 hover:border-purple-300/50 hover:bg-white/10 hover:shadow-lg hover:shadow-purple-500/20"
+      hover:scale-105 hover:border-purple-300/40 hover:bg-white/10 hover:shadow-md hover:shadow-purple-500/10"
             >
               <span>More About Me</span>
               <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -83,7 +83,7 @@ const Home = () => {
         {/* Social Icons */}
         <div className="text-(--color-text) flex flex-wrap justify-center items-center gap-4 sm:gap-8 px-4 py-4 mt-6">
           <button
-            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 hover:scale-110 transition duration-300 cursor-pointer"
+            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 transition duration-300 cursor-pointer"
             title="Github"
             onClick={() =>
               window.open("https://github.com/Rakhiraj1686", "_blank")
@@ -93,7 +93,7 @@ const Home = () => {
           </button>
 
           <button
-            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 hover:scale-110 transition duration-300 cursor-pointer"
+            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 transition duration-300 cursor-pointer"
             title="Leetcode"
             onClick={() =>
               window.open("https://leetcode.com/u/Rakhi_yadvv/", "_blank")
@@ -103,7 +103,7 @@ const Home = () => {
           </button>
 
           <button
-            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 hover:scale-110 transition duration-300 cursor-pointer"
+            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 transition duration-300 cursor-pointer"
             title="Linkedin"
             onClick={() =>
               window.open("https://www.linkedin.com/in/Rakhiraj1686", "_blank")
@@ -113,7 +113,7 @@ const Home = () => {
           </button>
 
           <button
-            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 hover:scale-110 transition duration-300 cursor-pointer"
+            className="icon-pulse text-xl sm:text-2xl rounded-full p-3 transition duration-300 cursor-pointer"
             title="Email"
             onClick={() => window.open("https://mail.google.com/", "_blank")}
           >

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const skills = [
   {
     title: "Languages",
-    items: ["Java", "JavaScript", "C++","C"],
+    items: ["Java", "JavaScript", "C++", "C"],
   },
   {
     title: "Web & Backend",
@@ -21,7 +21,7 @@ const skills = [
   },
   {
     title: "Database",
-    items: ["MongoDB", "Mongoose", "MySQL","Oracle"],
+    items: ["MongoDB", "Mongoose", "MySQL", "Oracle"],
   },
   {
     title: "Tools & Platforms",
@@ -58,7 +58,6 @@ const Skill = () => {
     <>
       <section className="relative min-h-screen overflow-hidden px-4 pb-12 pt-8 text-(--color-text) sm:px-6 sm:pb-16 sm:pt-12">
         <div className="mx-auto max-w-6xl">
-
           {/* Header */}
 
           <div className="mb-14 text-center">
@@ -66,9 +65,14 @@ const Skill = () => {
               My <span className="portfolio-name">Skills</span>
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-pink-100/75 leading-relaxed">
-              A showcase of my technical skills and the technologies I work with.
+              A showcase of my technical skills and the technologies I work
+              with.
             </p>
           </div>
+
+          {/* Divider */}
+
+          <div className="mx-auto h-px w-32 bg-linear-to-r from-transparent via-purple-300 to-pink-400 shadow-[0_0_24px_rgba(216,164,255,0.35)] mb-10" />
 
           {/* Skills Grid */}
 
@@ -76,13 +80,13 @@ const Skill = () => {
             variants={container}
             initial="hidden"
             animate="show"
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 "
           >
             {skills.map((skill) => (
               <motion.div
                 key={skill.title}
                 variants={cardItem}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-[0_18px_40px_rgba(5,3,7,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/35 hover:bg-white/8"
+                className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm shadow-[0_18px_40px_rgba(5,3,7,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:border-pink-300/35 hover:bg-white/8"
               >
                 <h3 className="mb-4 text-lg font-semibold portfolio-name">
                   {skill.title}
@@ -92,7 +96,7 @@ const Skill = () => {
                   {skill.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-pink-100/85 transition duration-300 hover:border-pink-300/40 hover:scale-105"
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-pink-100/85 transition duration-300 hover:border-pink-300/40"
                     >
                       {item}
                     </span>

@@ -1,7 +1,6 @@
 import React from "react";
 import hackathonNK from "../assets/hackathon/hackathonNK.jpeg";
 
-
 const hackathons = [
   {
     title: "NavKalpna Hackathon",
@@ -18,10 +17,8 @@ const hackathons = [
 const Hackathons = () => {
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden px-6 pb-16 pt-15 md:pt-24 text-(--color-text) md:px-12">
-        
-
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
+      <section className="relative min-h-screen overflow-hidden px-6 pb-16 pt-15 md:pt-15 text-(--color-text) md:px-12">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center mb-5">
           <h1 className="font-bold leading-tight">
             <span className="bg-linear-to-r from-(--color-primary) via-(--color-accent) to-(--color-secondary) bg-clip-text text-3xl text-transparent sm:text-4xl md:text-5xl">
               Hackathons
@@ -38,9 +35,12 @@ const Hackathons = () => {
             improve product thinking, architecture decisions, and rapid
             development skills.
           </p>
+          {/* Divider */}
+
+          <div className="mx-auto h-px w-32 bg-linear-to-r from-transparent via-purple-300 to-pink-400 shadow-[0_0_24px_rgba(216,164,255,0.35)]" />
 
           <div className="mt-4 grid grid-cols-2 gap-5">
-            <div className="group rounded-2xl border border-white/10 bg-black/35 px-4 py-3 backdrop-blur transition hover:-translate-y-1 hover:border-(--color-primary)/70">
+            <div className="group rounded-2xl border border-white/10 bg-black/35 px-4 py-3 backdrop-blur transition hover:-translate-y-0.5 hover:border-(--color-primary)/70">
               <p className="text-2xl font-bold text-(--color-primary) md:text-3xl">
                 2+
               </p>
@@ -49,7 +49,7 @@ const Hackathons = () => {
               </p>
             </div>
 
-            <div className="group rounded-2xl border border-white/10 bg-black/35 px-4 py-3 backdrop-blur transition hover:-translate-y-1 hover:border-(--color-secondary)/70">
+            <div className="group rounded-2xl border border-white/10 bg-black/35 px-4 py-3 backdrop-blur transition hover:-translate-y-0.5 hover:border-(--color-secondary)/70">
               <p className="text-2xl font-bold text-(--color-secondary) md:text-3xl">
                 MERN
               </p>
@@ -81,7 +81,7 @@ const Hackathons = () => {
                     <img
                       src={hackathon.image}
                       alt={hackathon.title}
-                      className="h-80 w-full rounded-2xl object-cover transition duration-500 hover:scale-105"
+                      className="h-80 w-full rounded-2xl object-cover transition duration-500 hover:scale-[1.02]"
                     />
                   </div>
 

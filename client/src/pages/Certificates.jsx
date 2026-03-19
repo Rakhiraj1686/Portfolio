@@ -49,7 +49,7 @@ const levelStyles = {
     bar: "from-violet-400/45 to-fuchsia-500/35",
     button: "hover:border-violet-300/45 hover:text-violet-100",
   },
-  
+
   Elite: {
     chip: "text-pink-100 border-pink-300/25 bg-pink-500/10",
     bar: "from-pink-400/45 to-rose-500/35",
@@ -81,13 +81,12 @@ const Certificates = () => {
 
   const totalOrgs = useMemo(
     () => new Set(certificates.map((cert) => cert.org)).size,
-    []
+    [],
   );
 
   return (
     <>
       <section className="relative min-h-screen overflow-hidden px-6 pb-16 pt-14 text-(--color-text) md:px-12">
-       
         <div className="mx-auto mb-10 max-w-4xl text-center animate-dropdown">
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
             Certificates
@@ -103,14 +102,18 @@ const Certificates = () => {
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+        {/* Divider */}
+
+        <div className="mx-auto h-px w-32 bg-linear-to-r from-transparent via-purple-300 to-pink-400 shadow-[0_0_24px_rgba(216,164,255,0.35)]" />
+
+        <div className="mx-auto grid max-w-6xl gap-6 mt-10 md:grid-cols-2">
           {certificates.map((cert, index) => {
             const style = levelStyles[cert.level] || fallbackStyle;
 
             return (
               <article
                 key={`${cert.title}-${index}`}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-pink-300/25 animate-dropdown"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-pink-300/25 animate-dropdown"
                 style={{ animationDelay: `${0.08 * index}s` }}
               >
                 <div
@@ -133,10 +136,14 @@ const Certificates = () => {
                     <p className="text-xs uppercase tracking-wide text-pink-100/60">
                       {cert.org}
                     </p>
-                    <span className="text-xs text-pink-100/65">{cert.year}</span>
+                    <span className="text-xs text-pink-100/65">
+                      {cert.year}
+                    </span>
                   </div>
 
-                  <h3 className="text-lg font-semibold text-pink-50">{cert.title}</h3>
+                  <h3 className="text-lg font-semibold text-pink-50">
+                    {cert.title}
+                  </h3>
 
                   <p className="mt-3 text-sm leading-relaxed text-pink-100/80">
                     {cert.note}
@@ -170,7 +177,8 @@ const Certificates = () => {
                   {selectedCert.title}
                 </h2>
                 <p className="text-xs text-pink-100/70">
-                  {selectedCert.org} • {selectedCert.year} • {selectedCert.level}
+                  {selectedCert.org} • {selectedCert.year} •{" "}
+                  {selectedCert.level}
                 </p>
               </div>
 

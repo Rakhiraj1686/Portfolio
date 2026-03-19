@@ -83,7 +83,7 @@ const item = {
 const About = () => {
   return (
     <>
-      <section className="relative min-h-screen overflow-hidden px-4 pb-12 pt-8 text-(--color-text) sm:px-6 sm:pb-16 sm:pt-12">
+      <section className="relative min-h-screen overflow-hidden px-6 pb-12 pt-8 text-(--color-text) sm:px-6 sm:pb-16 sm:pt-12">
         <div className="mx-auto max-w-6xl">
           
           {/* Heading */}
@@ -132,7 +132,7 @@ const About = () => {
               <motion.div
                 key={stat.label}
                 variants={item}
-                className={`${panelClassName} p-5 transition-all duration-300 hover:shadow-[0_0_30px_rgba(216,164,255,0.35)]`}
+                className={`${panelClassName} p-5 transition-all duration-200 hover:shadow-[0_0_16px_rgba(216,164,255,0.2)]`}
               >
                 <h3 className="text-3xl font-bold text-(--color-primary)">
                   {stat.value}
@@ -158,15 +158,14 @@ const About = () => {
                 <motion.div
                   key={card.title}
                   variants={item}
-                  whileHover={{ scale: 1.03 }}
-                  className={`${panelClassName} group flex gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:bg-white/10 hover:shadow-[0_0_35px_rgba(216,164,255,0.45)]`}
+                  whileHover={{ scale: 1 }}
+                  className={`${panelClassName} group flex gap-4 p-6 transition-all duration-100  hover:border-pink-300/35 hover:bg-white/10 hover:shadow-[0_0_18px_rgba(216,164,255,0.2)]`}
                 >
                   <div
                     className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl 
                     bg-linear-to-br from-pink-200/15 via-purple-300/20 to-pink-400/20 
                     text-xl text-pink-100
-                    transition-all duration-300
-                    group-hover:shadow-[0_0_18px_rgba(216,164,255,0.5)]"
+                    transition-all duration-300"
                   >
                     <Icon />
                   </div>

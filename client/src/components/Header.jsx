@@ -1,27 +1,19 @@
 import React, { useEffect, useState } from "react";
 import rakhi from "../assets/rrr.png";
 import { Link, useLocation } from "react-router-dom";
-import {
-  FaHome,
-  FaUser,
-  FaProjectDiagram,
-  FaTrophy,
-  FaBars,
-  FaTimes,
-} from "react-icons/fa";
-import { FiTool } from "react-icons/fi";
-import { PiMedalFill } from "react-icons/pi";
-import { AiFillTool } from "react-icons/ai";
-
+import { FaBars, FaXmark } from "react-icons/fa6";
+import { FiHome, FiAward, FiUser, FiTool } from "react-icons/fi";
+import { LuTrophy } from "react-icons/lu";
+import { FaRegFolder } from "react-icons/fa6";
 
 
 const navLinks = [
-  { to: "/", label: "Home", icon: FaHome },
-  { to: "/about", label: "About", icon: FaUser },
-  { to: "/skill", label: "Skill", icon: AiFillTool },
-  { to: "/project", label: "Project", icon: FaProjectDiagram },
-  { to: "/hackathons", label: "Hackathons", icon: FaTrophy },
-  { to: "/certificates", label: "Certificates", icon: PiMedalFill },
+  { to: "/", label: "Home", icon: FiHome },
+  { to: "/about", label: "About", icon: FiUser },
+  { to: "/skill", label: "Skill", icon: FiTool },
+  { to: "/project", label: "Project", icon: FaRegFolder },
+  { to: "/hackathons", label: "Hackathons", icon: LuTrophy },
+  { to: "/certificates", label: "Certificates", icon: FiAward },
 ];
 
 const Header = () => {
@@ -55,10 +47,10 @@ const Header = () => {
           {/* Mobile Button */}
           <div className="sm:hidden fixed top-10 right-4 z-50 text-white">
             <button
-              className="bg-black/50 backdrop-blur-md border border-white/10 rounded-full p-3 text-xl shadow-lg"
+              className=" backdrop-blur-md  rounded-full p-3 text-xl shadow-lg"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              {menuOpen ? <FaTimes /> : <FaBars />}
+              {menuOpen ? <FaXmark /> : <FaBars />}
             </button>
           </div>
         </>
@@ -87,10 +79,10 @@ const Header = () => {
           {/* Mobile Button */}
           <div className="md:hidden">
             <button
-              className="text-xl rounded-full p-2 bg-black/40 border border-white/10"
+              className="text-xl rounded-full p-2 "
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              {menuOpen ? <FaTimes /> : <FaBars />}
+              {menuOpen ? <FaXmark /> : <FaBars />}
             </button>
           </div>
         </div>
@@ -124,7 +116,7 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
             className="p-2 rounded-full hover:bg-white/10 transition"
           >
-            <FaTimes />
+            <FaXmark />
           </button>
         </div>
 
