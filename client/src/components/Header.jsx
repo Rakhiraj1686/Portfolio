@@ -5,6 +5,7 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 import { FiHome, FiAward, FiUser, FiTool } from "react-icons/fi";
 import { LuTrophy } from "react-icons/lu";
 import { FaRegFolder } from "react-icons/fa6";
+import { GoBriefcase } from "react-icons/go";
 
 
 const navLinks = [
@@ -14,6 +15,7 @@ const navLinks = [
   { to: "/project", label: "Project", icon: FaRegFolder },
   { to: "/hackathons", label: "Hackathons", icon: LuTrophy },
   { to: "/certificates", label: "Certificates", icon: FiAward },
+  // { to: "/experience", label: "Experience", icon: GoBriefcase }
 ];
 
 const Header = () => {
