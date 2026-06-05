@@ -15,7 +15,7 @@ const navLinks = [
   { to: "/project", label: "Project", icon: FaRegFolder },
   { to: "/hackathons", label: "Hackathons", icon: LuTrophy },
   { to: "/certificates", label: "Certificates", icon: FiAward },
-  // { to: "/experience", label: "Experience", icon: GoBriefcase }
+  { to: "/experience", label: "Experience", icon: GoBriefcase }
 ];
 
 const Header = () => {

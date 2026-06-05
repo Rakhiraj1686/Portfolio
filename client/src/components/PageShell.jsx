@@ -13,7 +13,7 @@ const PageShell = ({ eyebrow = "", title, description, children }) => {
         className="max-w-5xl mx-auto rounded-[28px] p-6 sm:p-10 backdrop-blur-md overflow-hidden"
         style={shellBackground}
       >
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-pink-200/70">
             {eyebrow}
           </p>
