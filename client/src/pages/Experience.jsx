@@ -13,7 +13,7 @@ const Experience = () => {
           My <span className="portfolio-name">Experience</span>
         </>
       }
-      description="Internships, hands-on learning, aur development journey ko same dark glass layout me present kiya jayega."
+      description="Internships and hands-on projects demonstrating end-to-end web development — designing responsive user interfaces, building backend APIs, optimizing performance, and deploying production websites."
       className = "flex justify-center items-center min-h-screen text-(--color-text) px-3 sm:px-8 md:px-6 pt-6 pb-20 sm:pb-6 ax-w-7xl mx-auto  bg-black/25 backdrop-blur-md p-4 sm:p-8 md:p-10"
     >
       <div className="mx-auto h-px w-32 bg-linear-to-r from-transparent via-purple-300 to-pink-400 shadow-[0_0_24px_rgba(216,164,255,0.35)]" />
