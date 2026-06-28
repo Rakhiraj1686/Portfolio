@@ -6,11 +6,18 @@ const shellBackground = {
   // boxShadow: "0 28px 70px rgba(5, 3, 7, 0.2)", // lighter shadow for soft/light theme
 };
 
-const PageShell = ({ eyebrow = "", title, description, children }) => {
+const PageShell = ({
+  eyebrow = "",
+  title,
+  description,
+  children,
+  className = "",
+  childrenClassName = "mt-6 sm:mt-8",
+}) => {
   return (
     <div className="min-h-screen px-4 sm:px-6 py-6 sm:py-12 text-(--color-text) text-center">
       <div
-        className="max-w-5xl mx-auto rounded-[28px] p-6 sm:p-10 backdrop-blur-md overflow-hidden"
+        className={`max-w-5xl mx-auto rounded-[28px] p-6 sm:p-10 backdrop-blur-md overflow-hidden ${className}`}
         style={shellBackground}
       >
         <div className="max-w-3xl mx-auto text-center">
@@ -27,7 +34,7 @@ const PageShell = ({ eyebrow = "", title, description, children }) => {
           ) : null}
         </div>
 
-        {children ? <div className="mt-8 sm:mt-10">{children}</div> : null}
+        {children ? <div className={childrenClassName}>{children}</div> : null}
       </div>
     </div>
   );
