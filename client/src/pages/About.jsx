@@ -32,9 +32,6 @@ const About = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,.03)_1px,transparent_1px)] bg-size-[26px_26px]" />
       <section className="relative flex-1 overflow-hidden px-6 py-20 text-white">
         <div className="absolute inset-0 -z-10">
-          {/* <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-pink-500/15 blur-[160px]" /> */}
-          {/* <div className="absolute right-0 bottom-0 h-112 w-md rounded-full bg-purple-600/15 blur-[180px]" /> */}
-          {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,.03)_1px,transparent_1px)] bg-size-[26px_26px]" /> */}
         </div>
 
         <div className="mx-auto max-w-6xl">
