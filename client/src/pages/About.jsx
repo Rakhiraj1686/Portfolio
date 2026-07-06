@@ -1,196 +1,308 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { TbSchool } from "react-icons/tb";
-import { FiBookOpen } from "react-icons/fi";
-import { AiOutlineRise } from "react-icons/ai";
-import { FaDownload, FaHeart } from "react-icons/fa";
+import { FaDownload, FaArrowDown } from "react-icons/fa";
+import { IoBookOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa6";
+import { FaReact } from "react-icons/fa";
 
 const resumeHref = "/resume.pdf";
 
-const panelClassName =
-  "rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_18px_40px_rgba(5,3,7,0.16)]";
-
-const stats = [
-  { value: "5+", label: "Projects Built" },
-  { value: "100+", label: "DSA Problems" },
-  { value: "4", label: "Tech Stacks" },
-  { value: "2027", label: "Graduate Year" },
-];
-
-const cards = [
+const highlights = [
   {
-    title: "Education",
-    icon: TbSchool,
-    content: (
-      <>
-        <p className="mt-2 text-pink-100/80">
-          <span className="font-medium text-(--color-primary)">
-            IES College of Technology
-          </span>{" "}
-          - B.Tech (ECE), CGPA 7.3
-        </p>
-        <p className="text-pink-100/65">
-          Academic journey focused on growth and practical learning.
-        </p>
-      </>
-    ),
+    number: "6+",
+    title: "Projects",
+    subtitle: "Built with React & MERN",
   },
   {
-    title: "Passion",
-    icon: FiBookOpen,
-    content: (
-      <p className="mt-2 text-pink-100/78">
-        I genuinely enjoy building full-stack applications and using clean,
-        scalable code to solve real-world problems.
-      </p>
-    ),
+    number: "200+",
+    title: "DSA Problems",
+    subtitle: "Consistency in problem solving",
   },
   {
-    title: "Interests",
-    icon: AiOutlineRise,
-    content: (
-      <p className="mt-2 text-pink-100/78">
-        Backend systems, scalable APIs, better UI design, and improving
-        problem-solving through DSA keep me motivated.
-      </p>
-    ),
-  },
-  {
-    title: "Hobbies",
-    icon: FaHeart,
-    content: (
-      <p className="mt-2 text-pink-100/78">
-        Exploring new places, journaling, reading, and creative activities keep
-        me refreshed and inspired.
-      </p>
-    ),
+    number: "2",
+    title: "Real Client",
+    subtitle: "Freelance business website",
   },
 ];
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
 
 const About = () => {
   return (
-    <>
-      <section className="relative min-h-screen overflow-hidden px-6 pb-12 pt-8 text-(--color-text) sm:px-6 sm:pb-16 sm:pt-12">
-        <div className="mx-auto max-w-6xl">
-          
-          {/* Heading */}
+    <div className="flex min-h-screen flex-col ">
+      <div className="absolute right-0 bottom-0 h-112 w-md rounded-full bg-purple-600/15 blur-[180px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,.03)_1px,transparent_1px)] bg-size-[26px_26px]" />
+      <section className="relative flex-1 overflow-hidden px-6 py-20 text-white">
+        <div className="absolute inset-0 -z-10">
+          {/* <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-pink-500/15 blur-[160px]" /> */}
+          {/* <div className="absolute right-0 bottom-0 h-112 w-md rounded-full bg-purple-600/15 blur-[180px]" /> */}
+          {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,.03)_1px,transparent_1px)] bg-size-[26px_26px]" /> */}
+        </div>
 
+        <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-14 text-center sm:pt-10"
+            className="text-center"
           >
-            <h1 className="mt-4 text-4xl font-bold sm:text-5xl">
-              About <span className="portfolio-name">Me</span>
-            </h1>
-
-            <p className="mx-auto mt-6 max-w-3xl leading-8 text-pink-100/80">
-              I am Rakhi, a MERN stack developer who enjoys turning ideas into
-              modern applications. I like building complete products and
-              continuously improving both visuals and logic.
+            <p className="text-sm uppercase tracking-[0.35em] text-pink-300">
+              About
             </p>
 
-            {/* <a
-              href={resumeHref}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 font-medium text-pink-50 shadow-[0_18px_40px_rgba(5,3,7,0.16)] transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40 hover:bg-white/10 hover:shadow-[0_0_25px_rgba(216,164,255,0.45)]"
-            >
-              <FaDownload className="text-(--color-primary)" />
-              Download Resume
-            </a> */}
+            <h1 className="mt-5 text-2xl font-bold leading-7 lg:leading-tight lg:text-4xl">
+              The Story Behind
+              <span className="portfolio-name mt-3 block">My Journey</span>
+            </h1>
+
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-7 text-white/70">
+              Every project I build teaches me something new. I enjoy creating
+              responsive interfaces, writing clean backend logic, and
+              continuously improving my development skills through real-world
+              projects.
+            </p>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-5">
+              <a
+                href={resumeHref}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full bg-linear-to-r from-pink-500 to-purple-600 px-6 py-3 font-semibold transition hover:-translate-y-1 hover:shadow-[0_0_10px_rgba(236,72,153,.45)]"
+              >
+                <div className="flex items-center gap-3">
+                  <FaDownload />
+                  View Resume
+                </div>
+              </a>
+            </div>
           </motion.div>
 
-          {/* Divider */}
-
-          <div className="mx-auto h-px w-32 bg-linear-to-r from-transparent via-purple-300 to-pink-400 shadow-[0_0_24px_rgba(216,164,255,0.35)]" />
-
-          {/* Stats */}
-
           <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="mb-14 mt-12 grid grid-cols-2 gap-4 text-center sm:gap-6 md:grid-cols-4"
+            className="mt-15 grid gap-6 md:grid-cols-3"
           >
-            {stats.map((stat) => (
+            {highlights.map((item) => (
               <motion.div
-                key={stat.label}
-                variants={item}
-                className={`${panelClassName} p-5 transition-all duration-200 hover:shadow-[0_0_16px_rgba(216,164,255,0.2)]`}
+                key={item.title}
+                whileHover={{ y: -6 }}
+                className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition-all duration-300 hover:border-pink-400/30"
               >
-                <h3 className="text-3xl font-bold text-(--color-primary)">
-                  {stat.value}
-                </h3>
-                <p className="mt-1 text-sm text-pink-100/70">{stat.label}</p>
+                <h2 className="text-3xl font-bold text-pink-300">
+                  {item.number}
+                </h2>
+                <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
+                <p className="mt-2 text-white/60">{item.subtitle}</p>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Cards */}
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            className="mt-15 flex justify-center"
+          >
+            <FaArrowDown className="text-2xl text-pink-300" />
+          </motion.div>
 
           <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid gap-6 md:grid-cols-2"
+            transition={{ duration: 0.7 }}
+            className="mt-15"
           >
-            {cards.map((card) => {
-              const Icon = card.icon;
+            <div className="flex items-center gap-4">
+              <div className="h-px flex-1 bg-white/10" />
+              <span className="rounded-full border border-pink-400/20 bg-pink-500/10 px-5 py-2 text-sm uppercase tracking-[0.3em] text-pink-300">
+                Journey
+              </span>
+              <div className="h-px flex-1 bg-white/10" />
+            </div>
 
-              return (
+            <div className="mt-16 space-y-8">
+              {[
+                {
+                  year: "2023",
+                  title: "Started Engineering",
+                  description:
+                    "Started my B.Tech journey and built a strong foundation in programming, logic and problem solving.",
+                },
+                {
+                  year: "2024",
+                  title: "Discovered Web Development",
+                  description:
+                    "Learned HTML, CSS, JavaScript and React while building responsive websites and personal projects.",
+                },
+                {
+                  year: "2025",
+                  title: "Entered Full Stack Development",
+                  description:
+                    "Built complete MERN applications with authentication, APIs, MongoDB and modern UI practices.",
+                },
+                {
+                  year: "2026",
+                  title: "Worked With a Real Client",
+                  description:
+                    "Designed and deployed a business website while communicating directly with the client and delivering requested features.",
+                },
+              ].map((step, index) => (
                 <motion.div
-                  key={card.title}
-                  variants={item}
-                  whileHover={{ scale: 1 }}
-                  className={`${panelClassName} group flex gap-4 p-6 transition-all duration-100  hover:border-pink-300/35 hover:bg-white/10 hover:shadow-[0_0_18px_rgba(216,164,255,0.2)]`}
+                  key={step.year}
+                  initial={{ opacity: 0, x: index % 2 ? 40 : -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.12 }}
+                  className="group grid items-center gap-6 lg:grid-cols-[120px_1fr]"
                 >
-                  <div
-                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl 
-                    bg-linear-to-br from-pink-200/15 via-purple-300/20 to-pink-400/20 
-                    text-xl text-pink-100
-                    transition-all duration-300"
-                  >
-                    <Icon />
+                  <div className="flex h-full items-center justify-center lg:justify-start">
+                    <span className="text-4xl font-bold text-pink-300 transition duration-300 group-hover:scale-110">
+                      {step.year}
+                    </span>
                   </div>
 
-                  <div>
-                    <h3 className="text-xl font-semibold text-pink-50">
-                      {card.title}
-                    </h3>
-                    {card.content}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-pink-400/30 hover:bg-white/10">
+                    <div className="absolute left-0 top-0 h-full w-1 bg-linear-to-b from-pink-400 to-purple-500" />
+                    <h3 className="text-2xl font-semibold">{step.title}</h3>
+                    <p className="mt-2 leading-6 text-white/65">
+                      {step.description}
+                    </p>
                   </div>
                 </motion.div>
-              );
-            })}
+              ))}
+            </div>
           </motion.div>
+
+          {/* ===================== WHAT DRIVES ME ===================== */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mt-24"
+          >
+            {/* Section Heading */}
+            <div className="flex items-center gap-4">
+              <div className="h-px flex-1 bg-white/10" />
+
+              <span className="rounded-full border border-pink-400/20 bg-pink-500/10 px-5 py-2 text-sm uppercase tracking-[0.3em] text-pink-300">
+                What Drives Me
+              </span>
+
+              <div className="h-px flex-1 bg-white/10" />
+            </div>
+
+            {/* Content */}
+            <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-xl transition-all duration-300 hover:border-pink-400/30 hover:bg-white/10">
+              <h2 className="text-3xl font-bold leading-9 lg:text-4xl">
+                Building With
+                <span className="portfolio-name"> Purpose</span>
+              </h2>
+
+              <p className="mt-8 text-lg leading-7 text-white/70">
+                I believe great applications are created through
+                <span className="font-medium text-pink-300">
+                  {" "}
+                  continuous learning
+                </span>
+                ,
+                <span className="font-medium text-pink-300">
+                  {" "}
+                  clean architecture
+                </span>
+                , and
+                <span className="font-medium text-pink-300">
+                  {" "}
+                  attention to user experience
+                </span>
+                .
+              </p>
+
+              <p className="mt-4 text-lg leading-6 text-white/70">
+                Every project challenges me to think differently, write cleaner
+                code, and become a better developer than I was yesterday.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* ===================== PERSONAL SIDE ===================== */}
+
+          <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mt-15"
+          >
+            <div className="flex items-center gap-4">
+              <div className="h-px flex-1 bg-white/10" />
+
+              <span className="rounded-full border border-pink-400/20 bg-pink-500/10 px-4 py-2 text-sm uppercase tracking-[0.3em] text-pink-300">
+                Beyond Development
+              </span>
+
+              <div className="h-px flex-1 bg-white/10" />
+            </div>
+
+            <div className="mt-10 grid gap-8 lg:grid-cols-3">
+              {/* Education */}
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-300 hover:border-pink-400/30 hover:bg-white/10">
+                <h3 className="text-2xl font-semibold flex items-center gap-3"><IoBookOutline className="text-pink-300 text-2xl" /> Education</h3>
+
+                <p className="mt-4 text-lg font-medium text-pink-300">
+                  IES College of Technology
+                </p>
+
+                <p className="mt-2 leading-5 text-white/70">
+                  B.Tech in Electronics & Communication Engineering
+                </p>
+
+                <p className="mt-1 text-white/60">CGPA: 7.3 • 2023 – 2027</p>
+              </div>
+
+              {/* Interests */}
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-300 hover:border-pink-400/30 hover:bg-white/10">
+                <h3 className="text-2xl font-semibold flex items-center gap-3"><FaReact className="text-pink-300 text-2xl" /> Interests</h3>
+
+                <p className="mt-4 text-lg font-medium text-pink-300">
+                  Full Stack Development & UI Design
+                </p>
+
+                <p className="mt-2 leading-5 text-white/70">
+                  Passionate about building modern web applications, creating
+                  intuitive user experiences, and developing scalable backend
+                  solutions.
+                </p>
+              </div>
+
+              {/* Hobbies */}
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-all duration-300 hover:border-pink-400/30 hover:bg-white/10">
+                <h3 className="text-2xl font-semibold flex items-center gap-3"><FaRegHeart /> Hobbies</h3>
+
+                <p className="mt-4 text-lg font-medium text-pink-300">
+                  Exploring, Reading & Creativity
+                </p>
+
+                <p className="mt-2 leading-5 text-white/70">
+                  I enjoy exploring new places, reading books, journaling, and
+                  engaging in creative activities that keep me inspired and help
+                  maintain a balanced lifestyle.
+                </p>
+              </div>
+            </div>
+          </motion.section>
         </div>
       </section>
 
-      {/* Footer */}
-
-      <div className="flex items-center justify-center border-t border-white/10 bg-white/5 py-3 backdrop-blur-sm">
-        <div className="text-sm tracking-wide text-pink-100/65">
-          &copy; 2026 Rakhi. All rights reserved.
+      <footer className="mt-20 border-t  border-white/10  bg-white/5 py-1">
+        <div className="text-center text-sm tracking-wide text-pink-100/60">
+          © 2026 Rakhi Roy. All rights reserved.
         </div>
-      </div>
-    </>
+      </footer>
+    </div>
   );
 };
 
