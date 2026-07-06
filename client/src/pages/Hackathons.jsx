@@ -125,9 +125,9 @@ const Hackathons = () => {
         </div>
       </section>
 
-      <div className="flex items-center justify-center bg-black/30 py-2 backdrop-blur-xl">
+      <div className="flex items-center justify-center bg-black/30 py-1 backdrop-blur-xl">
         <div className="text-sm tracking-wide text-(--color-text-muted)">
-          © 2026 Rakhi Rani. All rights reserved.
+          © 2026 Rakhi. All rights reserved.
         </div>
       </div>
     </>

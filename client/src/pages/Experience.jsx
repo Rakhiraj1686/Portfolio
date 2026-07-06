@@ -20,7 +20,6 @@ const Experience = () => {
 
       <div className="mx-auto max-w-6xl px-4">
         <article className="relative overflow-hidden rounded-3xl border border-pink-500/20 bg-white/5 backdrop-blur-xl p-6 lg:p-8 transition-all duration-300 hover:border-pink-400/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)]">
-
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
             {/* Left */}
             <div>
@@ -68,25 +67,25 @@ const Experience = () => {
 
             {/* Right */}
             <div className="relative">
-  <img
-    src={vijaiImg}
-    alt="Vijai Bhava Law Firm Website"
-    className="w-full rounded-2xl border border-white/10 shadow-xl"
-  />
+              <img
+                src={vijaiImg}
+                alt="Vijai Bhava Law Firm Website"
+                className="w-full rounded-2xl border border-white/10 shadow-xl"
+              />
 
-  <a
-    href="https://vijaibhavalawfirm.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="absolute top-4 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 backdrop-blur-md text-white hover:bg-pink-500 transition"
-  >
-    <FaLink />
-  </a>
+              <a
+                href="https://vijaibhavalawfirm.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-4 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 backdrop-blur-md text-white hover:bg-pink-500 transition"
+              >
+                <FaLink />
+              </a>
 
-  <div className="absolute bottom-4 left-4 rounded-full bg-green-500/20 px-4 py-1 text-xs font-medium text-green-300 backdrop-blur">
-    ● Live Website
-  </div>
-</div>
+              <div className="absolute bottom-4 left-4 rounded-full bg-green-500/20 px-4 py-1 text-xs font-medium text-green-300 backdrop-blur">
+                ● Live Website
+              </div>
+            </div>
           </div>
         </article>
       </div>

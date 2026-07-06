@@ -149,7 +149,7 @@ const Project = () => {
         </p>
       </section>
 
-      <div className="flex items-center justify-center border-t border-white/10 bg-white/5 py-3 backdrop-blur-sm">
+      <div className="flex items-center justify-center border-t border-white/10 bg-white/5 py-1 backdrop-blur-sm">
         <div className="text-sm tracking-wide text-pink-100/65">
           &copy; 2026 Rakhi. All rights reserved.
         </div>
