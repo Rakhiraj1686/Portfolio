@@ -4,8 +4,7 @@ import { FaDownload, FaArrowDown } from "react-icons/fa";
 import { IoBookOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
-
-const resumeHref = "/resume.pdf";
+import resume from "../assets/Certificates/Rakhi_Rani_CV.pdf";
 
 const highlights = [
   {
@@ -59,7 +58,7 @@ const About = () => {
 
             <div className="mt-10 flex flex-wrap justify-center gap-5">
               <a
-                href={resumeHref}
+                href={resume}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-full bg-linear-to-r from-pink-500 to-purple-600 px-6 py-3 font-semibold transition hover:-translate-y-1 hover:shadow-[0_0_10px_rgba(236,72,153,.45)]"

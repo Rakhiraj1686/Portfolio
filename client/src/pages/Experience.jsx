@@ -13,17 +13,17 @@ const Experience = () => {
         </>
       }
       description="Here’s a snapshot of my journey so far, working on real-world projects that strengthened my development skills."
-      childrenClassName="mt-2 sm:mt-4"
+      childrenClassName="mt-2 sm:mt-4 "
     >
       {/* Divider */}
       <div className="mx-auto h-px w-32 bg-linear-to-r from-transparent via-purple-300 to-pink-400 mb-8" />
 
-      <div className="mx-auto max-w-6xl px-4">
-        <article className="relative overflow-hidden rounded-3xl border border-pink-500/20 bg-white/5 backdrop-blur-xl p-6 lg:p-8 transition-all duration-300 hover:border-pink-400/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)]">
+      <div className="mx-auto max-w-5xl px-3">
+        <article className="relative overflow-hidden rounded-3xl border border-pink-500/20 bg-white/5 backdrop-blur-xl p-4 lg:p-6 transition-all duration-300 hover:border-pink-400/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)]">
           <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
             {/* Left */}
             <div>
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-3xl font-bold text-white text-start">
                 Full Stack Web Developer
               </h2>
 
@@ -39,10 +39,10 @@ const Experience = () => {
                 </span>
               </div>
 
-              <ul className="mt-8 space-y-5">
+              <ul className="mt-3 space-y-3 ">
                 <li className="flex items-start gap-4">
                   <span className="mt-2 h-2.5 w-2.5 rounded-full bg-pink-500 shrink-0" />
-                  <p className="max-w-md text-pink-100/80 leading-6">
+                  <p className="max-w-md text-pink-100/80 leading-5 flex text-start">
                     Built a responsive law firm website using React.js and
                     Node.js.
                   </p>
@@ -50,7 +50,7 @@ const Experience = () => {
 
                 <li className="flex items-start gap-4">
                   <span className="mt-2 h-2.5 w-2.5 rounded-full bg-pink-500 shrink-0" />
-                  <p className="max-w-md text-pink-100/80 leading-6">
+                  <p className="max-w-md text-pink-100/80 leading-5 flex text-start">
                     Integrated secure contact forms and deployed the website on
                     Hostinger.
                   </p>
@@ -58,7 +58,7 @@ const Experience = () => {
 
                 <li className="flex items-start gap-4">
                   <span className="mt-2 h-2.5 w-2.5 rounded-full bg-pink-500 shrink-0" />
-                  <p className="max-w-md text-pink-100/80 leading-6">
+                  <p className="max-w-md text-pink-100/80 leading-5 flex text-start">
                     Optimized performance and responsiveness across all devices.
                   </p>
                 </li>

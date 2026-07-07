@@ -21,7 +21,7 @@ const projects = [
       "REST API",
     ],
     github: "https://github.com/Rakhiraj1686/NavKalpana-RICR-NK-0029",
-    live: "https://healthup-ai.netlify.app/",
+    live: "https://healthup-ai.vercel.app/",
   },
   {
     title: "Craving",
@@ -120,7 +120,7 @@ const Project = () => {
                     className="flex-1 rounded-lg border border-white/10 bg-white/5 py-2 text-center text-sm transition hover:border-pink-300/40 hover:bg-white/10"
                   >
                     <IoLogoGithub className="inline mr-2" />
-                    View Code
+                    Source Code
                   </a>
 
                   <a
@@ -129,7 +129,7 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="flex-1 rounded-lg border border-white/10 bg-white/5 py-2 text-center text-sm transition hover:border-pink-300/40 hover:bg-white/10"
                   >
-                    View Live
+                    Live Demo
                     <HiOutlineExternalLink className="inline ml-2" />
                   </a>
                 </div>
