@@ -45,12 +45,12 @@ const About = () => {
               About
             </p>
 
-            <h1 className="mt-5 text-2xl font-bold leading-7 lg:leading-tight lg:text-4xl">
+            <h1 className="mt-5 text-2xl font-bold leading-6 lg:leading-tight lg:text-4xl">
               The Story Behind
               <span className="portfolio-name mt-3 block">My Journey</span>
             </h1>
 
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-7 text-white/70">
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-6 text-white/70">
               Every project I build teaches me something new. I enjoy creating
               responsive interfaces, writing clean backend logic, and
               continuously improving my development skills through real-world
@@ -190,13 +190,14 @@ const About = () => {
             </div>
 
             {/* Content */}
-            <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-xl transition-all duration-300 hover:border-pink-400/30 hover:bg-white/10">
-              <h2 className="text-3xl font-bold leading-9 lg:text-4xl">
+            <div className="mx-auto mt-12 max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-8 text-center backdrop-blur-xl transition-all duration-300 hover:border-pink-400/30 hover:bg-white/10">
+              <h2 className="text-3xl font-bold leading-6 lg:text-4xl">
                 Building With
                 <span className="portfolio-name"> Purpose</span>
               </h2>
 
-              <p className="mt-8 text-lg leading-7 text-white/70">
+              <div className="flex ">
+                <p className="mt-8 text-lg leading-5 text-white/70">
                 I believe great applications are created through
                 <span className="font-medium text-pink-300">
                   {" "}
@@ -214,8 +215,9 @@ const About = () => {
                 </span>
                 .
               </p>
+              </div>
 
-              <p className="mt-4 text-lg leading-6 text-white/70">
+              <p className="mt-2 text-lg leading-5 text-white/70">
                 Every project challenges me to think differently, write cleaner
                 code, and become a better developer than I was yesterday.
               </p>
