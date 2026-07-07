@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <div className="min-h-screen text-(--color-text) px-3 sm:px-8 md:px-6 pt-6 pb-20 sm:pb-6 ax-w-7xl mx-auto  bg-black/25 backdrop-blur-md p-4 sm:p-8 md:p-10">
         {/* Profile Image */}
-        <div className="mx-auto sm:px-15 sm:py-8 sm:justify-center">
+        <div className="mx-auto sm:px-16 sm:py-1 sm:justify-center">
           <img
             src={rakhi}
             alt="Rakhi"
@@ -80,7 +80,7 @@ const Home = () => {
         </div>
 
         {/* Social Icons */}
-        <div className="text-(--color-text) flex flex-wrap justify-center items-center gap-4 sm:gap-8 px-4 py-4 mt-6">
+        <div className="text-(--color-text) flex flex-wrap justify-center items-center gap-4 sm:gap-4 px-4 py-4 mt-6">
           <button
             className="icon-pulse text-xl sm:text-2xl rounded-full p-3 transition duration-300 cursor-pointer"
             title="Github"
@@ -114,7 +114,7 @@ const Home = () => {
           <button
             className="icon-pulse text-xl sm:text-2xl rounded-full p-3 transition duration-300 cursor-pointer"
             title="Email"
-            onClick={() => window.open("https://mail.google.com/", "_blank")}
+            onClick={() => window.open("https://rakhiraj1686@gmail.com", "_blank")}
           >
             <GoMail />
           </button>

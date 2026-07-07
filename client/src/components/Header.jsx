@@ -12,9 +12,9 @@ const navLinks = [
   { to: "/about", label: "About", icon: FiUser },
   { to: "/skill", label: "Skill", icon: FiTool },
   { to: "/project", label: "Project", icon: FaRegFolder },
-  { to: "/experience", label: "Experience", icon: FiBriefcase },
   { to: "/hackathons", label: "Hackathons", icon: LuTrophy },
   { to: "/certificates", label: "Certificates", icon: FiAward },
+  { to: "/experience", label: "Experience", icon: FiBriefcase },
 ];
 
 const Header = () => {
@@ -34,7 +34,7 @@ const Header = () => {
       {isHome ? (
         <>
           {/* Desktop Sidebar */}
-          <div className="hidden sm:fixed sm:flex  sm:flex-col sm:z-50 sm:right-6 sm:top-1/2 sm:-translate-y-1/2 bg-black/40 backdrop-blur-md border border-white/10 rounded-full p-3 py-8 gap-6 items-center  text-white shadow-[0_20px_50px_rgba(5,3,7,0.45)] px-5">
+          <div className="hidden sm:fixed sm:flex  sm:flex-col sm:z-50 sm:right-6 sm:top-1/2 sm:-translate-y-1/2 bg-black/40 backdrop-blur-md border border-white/10 rounded-full p-3 py-8 gap-6 items-center  text-white shadow-[0_20px_50px_rgba(5,3,7,0.45)] px-4">
             {navLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -62,18 +62,18 @@ const Header = () => {
           </div>
         </>
       ) : (
-        <div className="sticky top-4 z-30 p-4 sm:p-3 rounded-full sm:px-8 max-w-7xl mx-4 sm:mx-auto mt-4 sm:mt-6 flex justify-between items-center text-white backdrop-blur-md bg-black/40 border border-white/10 shadow-[0_20px_50px_rgba(5,3,7,0.4)]">
+        <div className="sticky top-2 z-30 p-4 sm:p-3 rounded-full sm:px-4 max-w-7xl mx-4 sm:mx-auto mt-4 sm:mt-6 flex justify-between items-center text-white backdrop-blur-md bg-black/40 border border-white/10 shadow-[0_20px_50px_rgba(5,3,7,0.4)]">
           {/* Logo */}
           <Link to="/" aria-label="Go to home">
             <img
-  src={rakhi}
-  alt="Rakhi"
-  className="h-10 w-10 sm:h-12 sm:w-12 rounded-full transition duration-300 hover:scale-110"
-/>
+              src={rakhi}
+              alt="Rakhi"
+              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full"
+            />
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex gap-6 text-sm">
+          <div className="hidden md:flex gap-6 px-2 text-sm">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -149,7 +149,7 @@ const Header = () => {
                 key={link.to}
                 to={link.to}
                 onClick={() => setMenuOpen(false)}
-                className={`group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300
+                className={`group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200
                 ${
                   isActive
                     ? "bg-linear-to-r from-purple-500/20 to-pink-500/20 text-white"
