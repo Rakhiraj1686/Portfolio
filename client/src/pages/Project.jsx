@@ -35,7 +35,7 @@ const projects = [
   title: "TransitOps",
   img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
   date: "July 2026",
-  desc: "A role-based transit operations management platform with secure authentication, role-based access control, and efficient management of transit operations.",
+  desc: "A role-based transit operations platform with secure authentication, access control, and efficient tools for daily management.",
   tech: [
     "React",
     "Node.js",
