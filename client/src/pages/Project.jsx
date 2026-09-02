@@ -28,16 +28,14 @@ const projects = [
       "JWT",
       "REST API",
     ],
-    github:
-      "https://github.com/Rakhiraj1686/NavKalpana-RICR-NK-0029",
+    github: "https://github.com/Rakhiraj1686/NavKalpana-RICR-NK-0029",
     live: "https://healthup-ai.vercel.app/",
   },
-
   {
-    title: "Craving",
-    img: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80",
-    date: "Jan 2026",
-    desc: "A seamless food ordering platform with authentication, cart system, real-time tracking and admin management.",
+    title: "TransitOps",
+    img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+    date: "July 2026",
+    desc: "A role-based transit operations management platform with secure authentication, role-based access control, and efficient management of transit operations.",
     tech: [
       "React",
       "Node.js",
@@ -45,12 +43,21 @@ const projects = [
       "MongoDB",
       "JWT",
       "REST API",
+      "TailwindCSS",
     ],
+    github: "https://github.com/Rakhiraj1686/TransitOps.git",
+    live: "https://transitops-rk.vercel.app",
+  },
+  {
+    title: "Craving",
+    img: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80",
+    date: "Jan 2026",
+    desc: "A seamless food ordering platform with authentication, cart system, real-time tracking and admin management.",
+    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "REST API"],
     github:
       "https://github.com/Rakhiraj1686/RICR-Web-Development/tree/main/Craving",
     live: "#",
   },
-
   {
     title: "DostiHUB",
     img: "https://images.unsplash.com/photo-1611605698335-8b1569810432?auto=format&fit=crop&w=1200&q=80",
@@ -69,26 +76,6 @@ const projects = [
     github: "https://github.com/Rakhiraj1686/chat-app",
     live: "#",
   },
-
-  {
-    title: "TransitOps",
-    img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
-    date: "July 2026",
-    desc: "A role-based transit operations management platform with secure authentication, role-based access control, and efficient management of transit operations.",
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "JWT",
-      "REST API",
-      "TailwindCSS",
-    ],
-    github:
-      "https://github.com/Rakhiraj1686/TransitOps.git",
-    live: "https://transitops-rk.vercel.app",
-  },
-
   {
     title: "EduAI",
     img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
@@ -104,8 +91,7 @@ const projects = [
       "TailwindCSS",
       "AI Integration",
     ],
-    github:
-      "https://github.com/nitish1445/HackInMotion-RICR-HIM-1166.git",
+    github: "https://github.com/nitish1445/HackInMotion-RICR-HIM-1166.git",
     live: "#",
   },
 ];
@@ -116,36 +102,28 @@ const process = [
   {
     icon: FiSearch,
     title: "Research",
-    description:
-      "Understanding the problem, users and requirements deeply.",
+    description: "Understanding the problem, users and requirements deeply.",
   },
   {
     icon: FiPenTool,
     title: "Design",
-    description:
-      "Wireframing and structuring a clean, intuitive interface.",
+    description: "Wireframing and structuring a clean, intuitive interface.",
   },
   {
     icon: FiCode,
     title: "Development",
-    description:
-      "Writing scalable, maintainable full-stack code.",
+    description: "Writing scalable, maintainable full-stack code.",
   },
   {
     icon: FiUploadCloud,
     title: "Deployment",
-    description:
-      "Shipping, testing and iterating in production.",
+    description: "Shipping, testing and iterating in production.",
   },
 ];
 
 /* ================= ANIMATED COUNTER ================= */
 
-const Counter = ({
-  value,
-  suffix = "",
-  duration = 1200,
-}) => {
+const Counter = ({ value, suffix = "", duration = 1200 }) => {
   const ref = useRef(null);
   const [display, setDisplay] = useState(0);
   const [started, setStarted] = useState(false);
@@ -159,10 +137,7 @@ const Counter = ({
           const startTime = performance.now();
 
           const step = (now) => {
-            const progress = Math.min(
-              (now - startTime) / duration,
-              1
-            );
+            const progress = Math.min((now - startTime) / duration, 1);
 
             setDisplay(Math.floor(progress * value));
 
@@ -174,7 +149,7 @@ const Counter = ({
           requestAnimationFrame(step);
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     if (ref.current) {
@@ -208,14 +183,11 @@ const ProjectCard = ({ project, index }) => {
   });
 
   const handleMove = (e) => {
-    const rect =
-      cardRef.current.getBoundingClientRect();
+    const rect = cardRef.current.getBoundingClientRect();
 
-    const px =
-      (e.clientX - rect.left) / rect.width;
+    const px = (e.clientX - rect.left) / rect.width;
 
-    const py =
-      (e.clientY - rect.top) / rect.height;
+    const py = (e.clientY - rect.top) / rect.height;
 
     setGlow({
       x: px * 100,
@@ -283,15 +255,12 @@ const ProjectCard = ({ project, index }) => {
       {/* Content */}
 
       <div className="relative flex flex-col gap-4 p-6">
-
         <div className="flex items-center justify-between">
           <h3 className="text-xl font-semibold text-pink-50">
             {project.title}
           </h3>
 
-          <span className="text-xs text-pink-100/65">
-            {project.date}
-          </span>
+          <span className="text-xs text-pink-100/65">{project.date}</span>
         </div>
 
         <p className="text-sm leading-relaxed text-pink-100/78">
@@ -314,7 +283,6 @@ const ProjectCard = ({ project, index }) => {
         {/* Buttons */}
 
         <div className="mt-3 flex gap-3">
-
           <a
             href={project.github}
             target="_blank"
@@ -334,7 +302,6 @@ const ProjectCard = ({ project, index }) => {
             Live Demo
             <HiOutlineExternalLink className="ml-2 inline" />
           </a>
-
         </div>
       </div>
     </div>
@@ -397,21 +364,17 @@ const Project = () => {
   return (
     <>
       <section className="relative min-h-screen overflow-hidden px-6 pb-16 pt-15 text-(--color-text) md:px-12">
-
         {/* ================= HEADER ================= */}
 
         <div className="mx-auto mb-16 max-w-2xl animate-fade-up text-center opacity-0">
-
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
             Projects
           </h1>
 
           <p className="mt-4 text-pink-100/80">
-            Some of the applications I've built and
-            contributed while learning and exploring
-            full-stack development.
+            Some of the applications I've built and contributed while learning
+            and exploring full-stack development.
           </p>
-
         </div>
 
         {/* ================= DIVIDER ================= */}
@@ -421,7 +384,6 @@ const Project = () => {
         {/* ================= PROJECT SLIDER ================= */}
 
         <div className="relative mx-auto mt-16 max-w-6xl">
-
           {/* ================= LEFT ARROW ================= */}
 
           <button
@@ -457,19 +419,11 @@ const Project = () => {
             className="projects-scroll overflow-x-auto overflow-y-hidden scroll-smooth px-1 pb-6 md:px-14"
           >
             <div className="flex w-max gap-8">
-
               {projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="w-[320px] shrink-0 sm:w-90 lg:w-95"
-                >
-                  <ProjectCard
-                    project={project}
-                    index={index}
-                  />
+                <div key={index} className="w-[320px] shrink-0 sm:w-90 lg:w-95">
+                  <ProjectCard project={project} index={index} />
                 </div>
               ))}
-
             </div>
           </div>
 
@@ -499,7 +453,6 @@ const Project = () => {
           >
             <FiChevronRight className="text-2xl" />
           </button>
-
         </div>
 
         {/* ================= MOBILE HINT ================= */}
@@ -523,9 +476,7 @@ const Project = () => {
         {/* ================= DEVELOPMENT PROCESS ================= */}
 
         <div className="mx-auto mt-24 max-w-6xl">
-
           <div className="flex items-center gap-4">
-
             <div className="h-px flex-1 bg-white/10" />
 
             <span className="rounded-full border border-pink-400/20 bg-pink-500/10 px-5 py-2 text-sm uppercase tracking-[0.3em] text-pink-300">
@@ -533,13 +484,10 @@ const Project = () => {
             </span>
 
             <div className="h-px flex-1 bg-white/10" />
-
           </div>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
             {process.map((step, i) => {
-
               const Icon = step.icon;
 
               return (
@@ -550,7 +498,6 @@ const Project = () => {
                   }}
                   className="relative animate-fade-up rounded-2xl border border-white/10 bg-white/5 p-6 text-center opacity-0 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-pink-300/40"
                 >
-
                   <span className="absolute right-5 top-4 text-xs font-medium text-white/25">
                     0{i + 1}
                   </span>
@@ -559,31 +506,24 @@ const Project = () => {
                     <Icon className="text-xl text-pink-300" />
                   </div>
 
-                  <h3 className="mt-4 text-lg font-semibold">
-                    {step.title}
-                  </h3>
+                  <h3 className="mt-4 text-lg font-semibold">{step.title}</h3>
 
                   <p className="mt-2 text-sm leading-5 text-pink-100/70">
                     {step.description}
                   </p>
-
                 </div>
               );
             })}
-
           </div>
         </div>
-
       </section>
 
       {/* ================= FOOTER ================= */}
 
       <div className="flex items-center justify-center border-t border-white/10 bg-white/5 py-1 backdrop-blur-sm">
-
         <div className="text-sm tracking-wide text-pink-100/65">
           &copy; 2026 Rakhi. All rights reserved.
         </div>
-
       </div>
     </>
   );
