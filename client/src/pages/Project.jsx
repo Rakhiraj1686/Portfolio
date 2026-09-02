@@ -86,7 +86,7 @@ const projects = [
     ],
     github:
       "https://github.com/Rakhiraj1686/TransitOps.git",
-    live: "https://transitops-rk.vercel.app/",
+    live: "https://transitops-rk.vercel.app",
   },
 
   {
@@ -461,7 +461,7 @@ const Project = () => {
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="w-[320px] shrink-0 sm:w-[360px] lg:w-[380px]"
+                  className="w-[320px] shrink-0 sm:w-90 lg:w-95"
                 >
                   <ProjectCard
                     project={project}
