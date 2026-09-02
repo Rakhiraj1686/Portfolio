@@ -4,7 +4,7 @@ import { FaDownload, FaArrowDown } from "react-icons/fa";
 import { IoBookOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
-import resume from "../assets/Certificates/Rakhi_Rani_CV.pdf";
+import resume from "../assets/Certificates/Rakhi_Resume.pdf";
 
 const highlights = [
   {
